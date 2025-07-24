@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "coach_estoico_checkin",
+  "name_for_human": "Coach Estoico Check-in",
+  "description_for_model": "Recibe y registra datos diarios de salud, ejercicio, emociones y compromiso del usuario estoico.",
+  "description_for_human": "Haz tu check-in diario de sueño, alimentación, ejercicio y emociones.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://Johnyboy1990.github.io/coach-estoico-plugin/openapi.yaml"
+  },
+  "logo_url": "https://raw.githubusercontent.com/Johnyboy1990/coach-estoico-plugin/main/logo.png"
+  "contact_email": "asesoriasdracuna@gmail.com",
+  "legal_info_url": "https://tuweb.com/legal"
+}
