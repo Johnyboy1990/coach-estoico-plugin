@@ -1,0 +1,51 @@
+openapi: 3.0.1
+info:
+  title: Coach Estoico Check-in API
+  description: API para registrar datos diarios de sueño, alimentación, ejercicio y emociones del usuario estoico.
+  version: '1.0'
+servers:
+  - url: https://hook.us2.make.com/{tu_endpoint_id}
+paths:
+  /checkin:
+    post:
+      summary: Enviar check-in diario
+      operationId: sendDailyData
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CheckinData'
+      responses:
+        '200':
+          description: Datos recibidos exitosamente
+components:
+  schemas:
+    CheckinData:
+      type: object
+      properties:
+        user_id:
+          type: string
+        sueno_horas:
+          type: number
+        comida_resumen:
+          type: string
+        ejercicio_realizado:
+          type: boolean
+        atracones_hoy:
+          type: boolean
+        animo_nivel:
+          type: integer
+        observaciones:
+          type: string
+        contrato_intencion_semanal:
+          type: string
+      required:
+        - user_id
+        - sueno_horas
+        - comida_resumen
+        - ejercicio_realizado
+        - atracones_hoy
+        - animo_nivel
+        - observaciones
+        - contrato_intencion_semanal
